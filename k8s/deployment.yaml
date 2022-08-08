@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: aca-classwork
+  name: battlecity
   labels:
-    app: battlecity
+    app: synergity/battlecity
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: battlecity
+      app: synergity/battlecity
   template:
     metadata:
       labels:
-        app: battlecity
+        app: synergity/battlecity
     spec:
       containers:
       - name: battlecity
-        image: synergity/battlecity
+        image: synergity/battlecity:latest
         ports:
         - containerPort: 80
 
@@ -24,14 +24,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: battlecity
+  name: privatelb
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: alb
     service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: 'true'
     service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
 spec:
   selector:
-    app: battlecity
+    app: synergity/battlecity
   type: LoadBalancer
   ports:
     - protocol: TCP
@@ -41,13 +41,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: battlecity-public
+  name: publiclb
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: alb
     service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: 'true'
 spec:
   selector:
-    app: battlecity
+    app: synergity/battlecity
   type: LoadBalancer
   ports:
     - protocol: TCP
