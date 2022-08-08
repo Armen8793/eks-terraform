@@ -1,24 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: battlecity
+  name: fctank
   labels:
-    app: synergity/battlecity
+    app: benb88/fc-tank
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: synergity/battlecity
+      app: benb88/fc-tank
   template:
     metadata:
       labels:
-        app: synergity/battlecity
+        app: benb88/fc-tank
     spec:
       containers:
-      - name: battlecity
-        image: synergity/battlecity:latest
+      - name: benb88/fc-tank
+        image: benb88/fc-tank:latest
         ports:
         - containerPort: 80
+
 
 ---
 apiVersion: v1
