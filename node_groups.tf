@@ -61,8 +61,6 @@ resource "aws_eks_node_group" "nodes_general" {
     role = "node-general"
   }
 
-  version = "1.18"
-
   depends_on = [
     aws_iam_role_policy_attachment.worker_node,
     aws_iam_role_policy_attachment.aca-cni-general-policy,
