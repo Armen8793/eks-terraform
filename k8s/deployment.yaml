@@ -1,24 +1,36 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: reactapp
+spec:
+  containers:
+  - name: reactapp
+    image: armen8793/myapp:v78
+
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fctank
+  name: reactapp
   labels:
-    app: benb88/fc-tank
+    app: reactapp
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: benb88/fc-tank
+      app: reactapp
   template:
     metadata:
       labels:
-        app: benb88/fc-tank
+        app: reactapp
     spec:
       containers:
-      - name: benb88/fc-tank
-        image: benb88/fc-tank:latest
+      - name: reactapp
+        image: armen8793/myapp:v78
+        imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 80
+        - containerPort: 3000
 
 
 ---
@@ -32,11 +44,11 @@ metadata:
     service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
 spec:
   selector:
-    app: synergity/battlecity
+    app: reactapp
   type: LoadBalancer
   ports:
     - protocol: TCP
-      port: 80
+      port: 3000
 
 ---
 apiVersion: v1
@@ -48,9 +60,9 @@ metadata:
     service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: 'true'
 spec:
   selector:
-    app: synergity/battlecity
+    app: reactapp
   type: LoadBalancer
   ports:
     - protocol: TCP
-      port: 80
+      port: 3000
                

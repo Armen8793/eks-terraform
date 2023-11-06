@@ -69,7 +69,7 @@ resource "aws_subnet" "public2" {
 
 
 resource "aws_eip" "AcaIp" {
-  vpc = true
+  domain = "vpc"
   
   tags = {
     Name = "AcaClassworkElasticIp"
