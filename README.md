@@ -4,8 +4,9 @@ When you pull the terraform code and execute commands terraform init and terrafo
 
 after that you must do the following commands:
 
-## aws eks update-kubeconfig --name ${YOUR CLUSTER NAME} --region ${YOUR REGION}
-
+''' shell
+aws eks update-kubeconfig --name ${YOUR CLUSTER NAME} --region ${YOUR REGION}
+'''
 ## pip3 install awscli --upgrade --user
 
 then when your kube config map is ready, do:
