@@ -10,7 +10,7 @@ variable "cluster" {
 
 variable "cluster_version" {
   description = "My cluster version"
-  default     = "1.22"
+  default     = "1.30"
 }
 
 variable "cidr" {
