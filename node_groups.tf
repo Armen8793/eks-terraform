@@ -1,5 +1,5 @@
 resource "aws_iam_role" "nodes_general" {
-  name = "general-node-group-aca-eks"
+  name = "general-node-group-eks"
   
   assume_role_policy = <<POLICY
 {
@@ -24,7 +24,7 @@ resource "aws_iam_role_policy_attachment" "worker_node" {
 }
 
 
-resource "aws_iam_role_policy_attachment" "aca-cni-general-policy" {
+resource "aws_iam_role_policy_attachment" "test-cni-general-policy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
   role       = aws_iam_role.nodes_general.name
 }
@@ -46,16 +46,16 @@ resource "aws_eks_node_group" "nodes_general" {
   ]
 
   scaling_config {
-    desired_size = 3
-    max_size = 5
-    min_size = 2
+    desired_size = 8
+    max_size = 10
+    min_size = 6
   }
 
   ami_type = "AL2_x86_64"
   capacity_type = "ON_DEMAND"
   disk_size = 20
   force_update_version = false
-  instance_types = ["t2.micro"]
+  instance_types = ["t3.large"]
 
   labels = {
     role = "node-general"
@@ -63,7 +63,7 @@ resource "aws_eks_node_group" "nodes_general" {
 
   depends_on = [
     aws_iam_role_policy_attachment.worker_node,
-    aws_iam_role_policy_attachment.aca-cni-general-policy,
+    aws_iam_role_policy_attachment.test-cni-general-policy,
     aws_iam_role_policy_attachment.ec2-read-only,
   ]
 }

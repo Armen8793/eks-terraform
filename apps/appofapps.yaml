@@ -1,0 +1,44 @@
+apiVersion: ENC[AES256_GCM,data:4Cqwb/BQSwEGe8p8YaUYpkPb4YA=,iv:UiVlQqWA/IjNZNk7b8YOSyt+KcFtZelaajcMlJ4f5JE=,tag:eAo4A8iyjJxxxxVwJvJSNw==,type:str]
+kind: ENC[AES256_GCM,data:OCukaNX/+5Clpbc=,iv:QISmoyi5m/5P9QHfQOEGKttMw1jPCsLNBPgOwKLTipg=,tag:u4Hxv2562bmlbFYlAQ/o1w==,type:str]
+metadata:
+    name: ENC[AES256_GCM,data:5cTlUNvGArQhoZI=,iv:RRmrU/eD0t/s0rgK99W74v4t2nrfodW0HVTzhtHAXKQ=,tag:UhUwcYAxCJ2wr+Krm51coA==,type:str]
+    namespace: ENC[AES256_GCM,data:NRhYqPcT,iv:lhyKspYmBqSNYvmvupv7zTgz3QNpguPov9+pbGwbgu0=,tag:aN7rt/clzxGrHX1po+ACCA==,type:str]
+spec:
+    destination:
+        namespace: ENC[AES256_GCM,data:rYHGH9/4,iv:SfXa3mExdULrDmTAHjYqpA0pBsdp8IXD5AehvUuwCNA=,tag:w2B7dH9lLSpJFQXqfcA/8w==,type:str]
+        server: ENC[AES256_GCM,data:3OCoCqtqQ8AWOFJneoIvZJ6UfQY9XoRbtL4G0cHo,iv:WNRoES+XTAPHxXpPkJH9Z1UiCdV2vwE8y30rLHet4wQ=,tag:Au8Wda1or+BOArW3rU9Cvg==,type:str]
+    source:
+        repoURL: ENC[AES256_GCM,data:TKbIOx81gjvPLR9iogaIHdW6dhWXFNFcvQyrrRS7v5l9v1x4jCRftW9vsf5t0+6b8PpX877wONU9zw==,iv:nL0AOmzqfvLAh3ZeJwPDYZ+lyyiahZZuis4MAQToTUE=,tag:jxrjiJ7VJPRRKH0qjT/3Dg==,type:str]
+        path: ENC[AES256_GCM,data:I0ftbQ==,iv:x42kv5kwYRibwbgeyI18a0/1WP635iMxVXkV9LaCjZ0=,tag:9p5zKk3neNESaGv/F9aU8w==,type:str]
+        targetRevision: ENC[AES256_GCM,data:pW8eFw==,iv:7EdEnKoT/LSHh6f+T78snRx5R1xGgFUY2ij2SXkrIgE=,tag:2K0RJyDMlmIxrA12hqrw4w==,type:str]
+    project: ENC[AES256_GCM,data:b6qbDY7aqw==,iv:rP+dfCTzMYIUPOLxjNMxAjmPytNQPEegY8nl0KPHajU=,tag:fP9bo/sOXjie+v890I3uxw==,type:str]
+    syncPolicy:
+        automated:
+            prune: ENC[AES256_GCM,data:LRZGfQ==,iv:huyjrC82VPBuACX6poCYnJBokORdi98tyDhS5cMCIvg=,tag:MHGyNioSMUG0Ahn1T7YD+g==,type:bool]
+            selfHeal: ENC[AES256_GCM,data:SmM0fA==,iv:wZYtmQj8d5Xg1dmbxQ9oO+d57bo4Pee9Yu32zrl0wL0=,tag:SFi6ZGBVOanpNG6+kmZjuA==,type:bool]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2025-03-12T06:24:12Z"
+    mac: ENC[AES256_GCM,data:z/Wb6BdbKbTg1Tasu0fQe9CbRTCJ0oVoFNT4qzvf6rtPzw/LhM1fJdo1M1bzJrw9GqxSlmTB51DnngxVQ6AisECfMhyWQ/x0q8MHtAEdaDOoF5rbKFoHTb8kJ84mK+5GZpalW0jQIS7tlHMtxwhE7ikBvEWblgUZsCYnx1iacnk=,iv:Ehged9FAy0iqaX/UQNYGy3SKfnsrV4zT/qTaSKyp6fE=,tag:vBoWgAQOH3PiX534kg5xBA==,type:str]
+    pgp:
+        - created_at: "2025-03-12T06:24:12Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQEMA63k56nv8UDZAQf+LKPoxyWbdsFstBg2xLmRwkFnhuD9nB/SlxHnis1FwZMX
+            9IadyhkMOXRw66z7bzew4NSyA0/BPzza3d0vlsgSOuLbZMZls6MfoDR+ND9Pxsjf
+            zmBYVgltcDNFbiTNcQVcXQxc6rEvVyvAveyvegiCk81jPdd4Y+jlO0MrrB8u0GtZ
+            cmozP/r8KIIy0x5/hEitmLGK3PM7f78P0m+Ob2wQS+wDNuNokMPtxbWv26Mg8ZcA
+            YuiWlM+Tmc+4kKFoSuiUsFQcRICF+/ceOAjHyeMBJtZzyha5e53J4vivCa6LHHsa
+            jr3mqwfyyFjxCrbIKauNnZqnrpSWPXsw0PVaBFpN39RoAQkCEHSaGavVoixm0LYo
+            o6Henn0Yt8RZgY3qkk83Wm0NX/WAejUBNgZVFgwnNvEuTE5uABxGUmc+5OPk4jZx
+            AWKPN+Vlbu8uJSkc+Yyncjkwv3eSqdGeE1uRoVau59GLY7MIIjn/MGs=
+            =FQvI
+            -----END PGP MESSAGE-----
+          fp: 632E4F08822C9E67
+    unencrypted_suffix: _unencrypted
+    version: 3.7.3

@@ -4,7 +4,7 @@ resource "aws_vpc" "main" {
   enable_dns_hostnames = true
 
   tags = {
-    Name = "ACA-cluster-vpc"
+    Name = "test"
   }
 }
 
@@ -12,7 +12,7 @@ resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.main.id
 
   tags = {
-    Name = "MyAcaIgw"
+    Name = "test"
   }
 }
 
@@ -22,7 +22,7 @@ resource "aws_subnet" "private" {
   availability_zone = "${var.region}a"
 
   tags = {
-    "Name"                                      = "ACA-Task-private-subnet"
+    "Name"                                      = "test-private"
     "kubernetes.io/role/internal-elb"           = "1"
     "kubernetes.io/cluster/${var.cluster}"      = "owned"
   }
@@ -34,7 +34,7 @@ resource "aws_subnet" "private2" {
   availability_zone = "${var.region}b"
 
   tags = {
-    "Name"                                      = "ACA-Task-private-subnet2"
+    "Name"                                      = "test-private2"
     "kubernetes.io/role/internal-elb"           = "1"
     "kubernetes.io/cluster/${var.cluster}"      = "owned"
   }
@@ -48,7 +48,7 @@ resource "aws_subnet" "public" {
   map_public_ip_on_launch = true
 
   tags = {
-    "Name"                                      = "ACA-Task-private-subnet"
+    "Name"                                      = "test-public"
     "kubernetes.io/role/elb"                    = "1"
     "kubernetes.io/cluster/${var.cluster}"      = "owned"
   }
@@ -61,7 +61,7 @@ resource "aws_subnet" "public2" {
   map_public_ip_on_launch = true
 
   tags = {
-    "Name"                                      = "ACA-Task-private-subnet2"
+    "Name"                                      = "test-public2"
     "kubernetes.io/role/elb"                    = "1"
     "kubernetes.io/cluster/${var.cluster}"      = "owned"
   }
@@ -72,7 +72,7 @@ resource "aws_eip" "AcaIp" {
   domain = "vpc"
   
   tags = {
-    Name = "AcaClassworkElasticIp"
+    Name = "test-ip"
   }
 }
 
@@ -81,7 +81,7 @@ resource "aws_nat_gateway" "nat" {
   subnet_id     = aws_subnet.public.id
   
   tags = {
-    Name = "AcaNatGateway"
+    Name = "TestNatGateway"
   }
 
   depends_on = [aws_internet_gateway.igw]
@@ -95,7 +95,7 @@ resource "aws_route_table" "private" {
   }
  
   tags = {
-    Name = "AcaTaskPrivateRT"
+    Name = "TestPrivateRT"
   }
 }
 
@@ -107,7 +107,7 @@ resource "aws_route_table" "public" {
   }
 
   tags = {
-    Name = "AcaTaskPublicRT"
+    Name = "TestPublicRT"
   }
 }
 

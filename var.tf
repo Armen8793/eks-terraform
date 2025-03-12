@@ -1,11 +1,11 @@
 variable "region" {
   description = "My instance region"
-  default     = "us-east-1"
+  default     = "us-west-1"
 }
 
 variable "cluster" {
   description = "Name of my eks cluster"
-  default     = "Aca-07-08-2022-classwork-cluster"
+  default     = "test"
 }
 
 variable "cluster_version" {

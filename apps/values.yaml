@@ -1,0 +1,32 @@
+spec:
+    destination:
+        server: ENC[AES256_GCM,data:6CkIzSIgm1WU4/SKiiPrEsCAZtraY7BxXduLG4ga,iv:K8NT0Zr5IBqzWOyeezmXv+DAaOnBR6M7S5srDgRfFik=,tag:yr0crv0t4aQjIWxWdQA1lA==,type:str]
+    source:
+        repoURL: ENC[AES256_GCM,data:slJRNhnG/iSVOsc/kAwLB8KvzFdnE90kfXxKvAKbU0KkNrXALIEEozKvluynCzJ2+abHwjH4,iv:4iIxwr41X5CUxiDtMEc5j5Moh17K8rtv47AIhjKhRbI=,tag:G74MF08S0VSbIl/9x5d+/Q==,type:str]
+        targetRevision: ENC[AES256_GCM,data:/R+RAg==,iv:db0tKGozQRVwLSvrHAti7XX6GDc60yw2EFm8R6+drSQ=,tag:sfSzHzz8D2DbzH3nR9Urjw==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2025-03-12T06:21:45Z"
+    mac: ENC[AES256_GCM,data:LQyw1DZ3pYa1tNxaIrx0tr6+QrPkcf9kcEgzKaGz1MyFQMHn/ooLqt7Ust/KI8SNItVr2iCKqLkOoEOOxbZkHeKgIxod6sEZxYa7JSkCHxZNph9kxmMT92zVE2ZWm+b+rR3efStcy/Xi9q4Hjz8ukt92AhOxPjJM8tNuLTo1tdg=,iv:u4ysk/63FoiNir2yaxBTg/SH1gzpyeZJFmRPkrSRhJg=,tag:vLRhMGyvY+Ykp6wSSExvtw==,type:str]
+    pgp:
+        - created_at: "2025-03-12T06:21:44Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQEMA63k56nv8UDZAQf+O8k2AgvoaAEwlFldvlx99LMk1hoX138+6n1rNRzAMrpP
+            hg/jLmREuLGJ+1CErXEi3lklIBm4qZBYKjBaksumQZEwrgMUzRPjHT25FTWWowLv
+            u+ovHRlsmPzyRm5ppBQdgdxT6FDyzurZ2h+bS7SJX6/xxvsasiiAGZv+UdI7xBbV
+            dogCJZhw/xDSMPCfjhp5ydHTW9yDNklCEq3GXpJ9vOcdzmRelf6HsPwA7WWRP3F+
+            r488dusgp+WH9l69ltf6bkJiEXBco4CA3JO5E5J4Z78HgTd6QWpluG0qs6BcfKpb
+            2DozEbB6ujZS9V77Nykyg1B3PnOcTabIyX3lT0Rv6dRoAQkCELXFYDp/tcWLDRt9
+            xkSwWMCNmrg1wuTlZo01u4fmDSWPqiosKRiKA2RpgvIO4Pd3920EQVXB/YLhImNl
+            35Wxvc/RWTcJNxegcoo8gWMuDpgh2cPpeUximWUxuexiWXwdNHTuas0=
+            =vphy
+            -----END PGP MESSAGE-----
+          fp: 632E4F08822C9E67
+    unencrypted_suffix: _unencrypted
+    version: 3.7.3
